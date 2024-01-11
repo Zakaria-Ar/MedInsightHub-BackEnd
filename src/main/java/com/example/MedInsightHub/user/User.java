@@ -5,7 +5,10 @@ import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3c2e4af78cb2a6bc3188f9034532f151b09d0b0a
 
 import java.time.LocalDateTime;
 import java.util.Collection;
@@ -17,9 +20,13 @@ import java.util.List;
 @Builder
 @Getter
 @Setter
+<<<<<<< HEAD
 
 public class User implements UserDetails {
 
+=======
+public class User implements UserDetails {
+>>>>>>> 3c2e4af78cb2a6bc3188f9034532f151b09d0b0a
     @Id
     @SequenceGenerator(
             name = "user_sequence",
