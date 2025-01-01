@@ -11,10 +11,10 @@ import java.util.Optional;
 @Repository
 public interface LikeRepository extends JpaRepository<Like,Long> {
 
-    @Query("select l from Like l where l.post_comment_id=?1")
+    @Query("select l from _like l where l.post_comment_id=?1")
     List<Like> getLikesByCommentOrPost(long post_comment_id);
 
-    @Query("select l from Like l where l.post_comment_id=?1 and l.doctor=?2")
+    @Query("select l from _like l where l.post_comment_id=?1 and l.doctor=?2")
     Optional<Like> getLikeByPostCommentAndDoctor(Long post_comment_id, Doctor doctor);
 
 }

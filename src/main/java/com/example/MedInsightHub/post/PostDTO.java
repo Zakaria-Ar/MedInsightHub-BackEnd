@@ -1,10 +1,12 @@
 package com.example.MedInsightHub.post;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Getter
 @AllArgsConstructor
 public class PostDTO {
     private long post_id;

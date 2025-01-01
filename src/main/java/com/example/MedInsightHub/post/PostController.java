@@ -25,6 +25,10 @@ public class PostController {
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if ( principal instanceof UserDetails) {
             long doctor_id = doctorService.getDoctorByUsername(((UserDetails) principal).getUsername()).getDoctor_id();
+            List<PostDTO> list = postService.getNotClosedPosts(doctor_id);
+            for(PostDTO p : list){
+                System.out.println(p.getTitle());
+            }
             return postService.getNotClosedPosts(doctor_id);
         } else {
             throw new UsernameNotFoundException("doctor not found!!!");
